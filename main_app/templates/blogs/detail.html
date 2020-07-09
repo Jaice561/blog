@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Your Thought</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ blog.title }}</span>
+    <p>Your Thought: {{ blog.thought }}</p>
+  </div>
+  <div class="card-action">
+    <a href="{% url 'blogs_delete' blog.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

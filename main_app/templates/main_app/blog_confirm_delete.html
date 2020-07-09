@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete Your Thought</h1>
+
+  <h4>Aww! Are you sure you want to delete your thought?</h4>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes - Delete!" class="btn">
+    <a href="{% url 'detail' blog.id %}">Cancel</a>
+  </form>
+{% endblock %}
